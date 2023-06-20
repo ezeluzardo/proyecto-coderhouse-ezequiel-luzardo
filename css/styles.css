@@ -55,14 +55,16 @@ nav a:hover {
     width: 100%;
     height: 550px;
 }
+
 #imagenbanner-mobile {
     width: 100%;
     height: auto;
 }
+
 /* Tarjetas de productos */
 .container-tarjetas {
     display: flex;
-    align-items:center;
+    align-items: center;
     margin-top: auto;
     margin-left: auto;
     margin-right: auto;
@@ -72,6 +74,7 @@ nav a:hover {
 
 
 }
+
 /* imagenes productos  */
 .imagenesproductos {
     display: flex;
@@ -86,7 +89,7 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     height: 600px;
-    margin-top: 10px ;
+    margin-top: 10px;
     margin-bottom: 30px;
 }
 
@@ -119,11 +122,11 @@ h3 {
 
 h4 {
     color: rgb(74, 59, 35);
-    
+
 }
 
 p {
-    
+
     text-align: auto;
     line-height: 1.5;
     font-size: 18px;
@@ -136,21 +139,22 @@ article {
 }
 
 /* Estilo del Main */
- main {
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: auto;
     margin-left: auto;
     margin-right: auto;
-} 
+}
 
 /* Estilo del Footer */
 footer {
     background-color: rgba(154, 193, 157, 0.717);
     display: flex;
-    justify-content: space-between;
-    
+    padding: 10px 20px;
+    justify-content:flex-end;
+
 }
 
 /* Iconos de redes sociales */
@@ -161,21 +165,41 @@ footer {
 
 .social-icons a {
     color: #333;
-    font-size: 20px;
+
+    font-size: 25px;
     margin-left: 10px;
 }
 
 /* carousel de imagenes en inicio  */
 .carousel-container {
-    display: flex;
+    display: auto;
+    margin: auto;
+
     justify-content: center;
     align-items: center;
-    height: 100vh; 
+    height: 100vh;
+    margin-top: 30px;
 }
 
 
 .carousel-inner img {
     max-width: 100%;
     height: auto;
+    margin:auto;
+
 }
 
+.container-form {
+    padding: 20px;
+    margin-bottom:20px;
+}
+
+.irinicio {
+    position: fixed; bottom: 20px; left: 10px; border-radius: 10px
+}
+
+.card {
+    width: 18rem;
+margin-bottom: 0.5rem;
+margin-right:0.5rem;
+}
