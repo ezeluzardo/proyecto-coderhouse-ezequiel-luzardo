@@ -106,6 +106,8 @@ h1 {
     font-size: 25px;
     margin-top: 20px;
     margin-bottom: 20px;
+    font:150% sans-serif;
+    font-weight: 900;
 }
 
 h2 {
