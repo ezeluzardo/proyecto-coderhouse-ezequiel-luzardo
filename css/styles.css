@@ -118,7 +118,7 @@ article {
 
 /* Estilo del Main */
 main {
-    display: flex;
+    display: block;
     flex-direction: column;
     align-items: center;
     margin-top: auto;
