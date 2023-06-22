@@ -87,10 +87,11 @@ h1 {
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 25px;
     text-align: auto;
     margin-top: 20px;
     margin-bottom: 20px;
+    font-weight: 900;
 }
 
 h3 {
