@@ -1,0 +1,44 @@
+/* BANNER EN INDEX*/
+#imagenbanner {
+    width: 100%;
+    height: 550px;
+}
+
+#imagenbanner-mobile {
+    width: 100%;
+    height: auto;
+}
+/* carousel de imagenes en inicio  */
+.carousel-container {
+    display: auto;
+    margin: auto;
+
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 30px;
+}
+
+
+.carousel-inner img {
+    max-width: 100%;
+    height: auto;
+    margin:auto;
+
+}
+
+.container-form {
+    padding: 20px;
+    margin-bottom:20px;
+}
+/* boton flotante para ir al inicio */
+.irinicio {
+    position: fixed; bottom: 20px; left: 10px; border-radius: 10px
+}
+
+.card {
+    width: 18rem;
+margin-bottom: 0.5rem;
+margin-right:0.5rem;
+}
+

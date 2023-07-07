@@ -1,0 +1,14 @@
+/* Video que se encuentra en la secc. productos */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.video-container video {
+    max-width: 100%;
+    max-height: 100%;
+}
