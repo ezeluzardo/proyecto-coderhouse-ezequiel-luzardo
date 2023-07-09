@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +15,38 @@ header {
   margin-right: auto;
 }
 
+/* gradiente de color en el header */
+header {
+  background: linear-gradient(to bottom, rgba(248, 246, 212, 0.774) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Animación de desvanecimiento del logo */
+#logo {
+  opacity: 0;
+  animation: fade-in 3s forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Animación de desvanecimiento solo al cargar la página */
+body {
+  animation: fade-in-page 2s forwards;
+}
+
+@keyframes fade-in-page {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* BARRA DE NAVEGACION */
 nav {
   padding: 10px;
@@ -44,7 +77,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #E4DAD3;
+  background-color: rgba(217, 245, 125, 0.5019607843);
 }
 
 h1 {
@@ -97,7 +130,7 @@ main {
 
 /* Estilo del Footer */
 footer {
-  background-color: rgba(154, 193, 157, 0.717);
+  background: linear-gradient(to left, rgba(223, 242, 225, 0.717) 50%, rgba(0, 0, 0, 0) 100%);
   display: flex;
   padding: 10px 20px;
   justify-content: flex-end;
