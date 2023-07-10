@@ -231,6 +231,11 @@ footer {
     margin-bottom: 2%;
   }
 }
+.container-form {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
 /* Video que se encuentra en la secc. productos */
 .video-container {
   display: flex;
