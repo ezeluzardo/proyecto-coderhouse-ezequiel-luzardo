@@ -104,13 +104,20 @@ h2 {
 }
 
 h3 {
+    font-size: 20px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 h4 {
     color: rgb(74, 59, 35);
 
+}
+
+h5 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: center;
 }
 
 p {
@@ -156,38 +163,4 @@ footer {
 
     font-size: 25px;
     margin-left: 10px;
-}
-
-
-/* CARROUSEL EN INICIO */
-.carousel-item {
-    height: 400px;
-}
-
-.carousel-item img {
-    object-fit: cover;
-    height: 100%;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    height: 50px;
-    width: 50px;
-    background-size: cover;
-    background-image: url('arrow.svg');
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    height: 50px;
-    width: 50px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.carousel-indicators li {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.carousel-indicators .active {
-    background-color: rgba(0, 0, 0, 0.9);
 }
