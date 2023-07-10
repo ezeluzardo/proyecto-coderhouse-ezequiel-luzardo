@@ -17,7 +17,7 @@ header {
 
 /* gradiente de color en el header */
 header {
-    background: linear-gradient(to bottom, rgba(248, 246, 212, 0.774) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to bottom, $gradient-start 0%, $gradient-end 100%);
 }
 
 /* Animación de desvanecimiento del logo */
@@ -59,9 +59,9 @@ nav {
     width: 100vw;
     display: flex;
     justify-content: center;
-}
 
-nav ul {
+
+& ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -70,21 +70,23 @@ nav ul {
     align-items: center;
 }
 
-nav li {
+& li {
     margin-right: 10px;
 }
 
-nav a {
+& a {
     text-decoration: none;
-    color: #6B6362;
+    color:$main-color;
     padding: 8px;
     border-radius: 4px;
     font-size: 20px;
+
+    &:hover {
+        background-color:$highlight-color;
+    }
+}
 }
 
-nav a:hover {
-    background-color: #d9f57d80;
-}
 
 h1 {
     text-align: center;
