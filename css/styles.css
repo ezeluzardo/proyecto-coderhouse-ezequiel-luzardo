@@ -50,7 +50,7 @@ body {
 /* BARRA DE NAVEGACION */
 nav {
   padding: 10px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -71,32 +71,40 @@ nav a {
   padding: 8px;
   border-radius: 4px;
   font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
 }
 nav a:hover {
   background-color: rgba(217, 245, 125, 0.5019607843);
 }
 
+.btn {
+  background-color: #6B6362;
+}
+
+/* Estilo de TEXTOS */
 h1 {
   text-align: center;
-  font-size: 25px;
+  font-size: 35px;
   margin-top: 20px;
   margin-bottom: 20px;
-  font: 150% sans-serif;
   font-weight: 900;
+  padding-bottom: 30px;
 }
 
 h2 {
   font-size: 25px;
-  text-align: auto;
+  text-align: center;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-weight: 900;
+  font-family: "Montserrat", sans-serif;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
-  margin-top: 25px;
+  margin-top: center;
 }
 
 h4 {
@@ -115,10 +123,18 @@ p {
   font-size: 18px;
   margin-left: 10px;
   margin-right: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 article {
   text-indent: 20px;
+}
+
+li {
+  font-size: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* Estilo del Main */
@@ -137,12 +153,14 @@ footer {
   display: flex;
   padding: 10px 20px;
   justify-content: flex-end;
+  align-items: center;
 }
 
 /* Iconos de redes sociales */
 .social-icons {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .social-icons a {
@@ -154,7 +172,8 @@ footer {
 /* BANNER EN INDEX*/
 #imagenbanner {
   width: 100%;
-  height: 550px;
+  height: auto;
+  object-fit: cover;
 }
 
 #imagenbanner-mobile {
@@ -204,6 +223,18 @@ footer {
 .container-form {
   padding: 20px;
   margin-bottom: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 500;
+  padding: 20px;
+  padding-bottom: 20px;
+  border: 2px solid #999;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.container-form:hover {
+  border-color: #999;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
 .boton-enviar {
@@ -242,6 +273,17 @@ footer {
   max-height: 100%;
 }
 
+.card {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .quienessomos {
   padding: 1rem;
 }
@@ -260,6 +302,17 @@ footer {
   background-color: #5714f3;
   border-color: #000;
   color: #fff;
+}
+
+.container-tienda .card {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container-tienda .card:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /*# sourceMappingURL=styles.css.map */

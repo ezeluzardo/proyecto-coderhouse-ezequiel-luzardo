@@ -54,9 +54,12 @@ body {
 
 
 /* BARRA DE NAVEGACION */
+
+
+
 nav {
     padding: 10px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
 
@@ -80,29 +83,40 @@ nav {
     padding: 8px;
     border-radius: 4px;
     font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
 
     &:hover {
         background-color:$highlight-color;
     }
 }
 }
+.btn {
+    background-color: $main-color;
+}
 
 
+
+
+
+/* Estilo de TEXTOS */
 h1 {
     text-align: center;
-    font-size: 25px;
+    font-size: 35px;
     margin-top: 20px;
     margin-bottom: 20px;
-    font: 150% sans-serif;
     font-weight: 900;
+    padding-bottom: 30px;
 }
 
 h2 {
     font-size: 25px;
-    text-align: auto;
+    text-align: center;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    
 }
 
 h3 {
@@ -129,12 +143,20 @@ p {
     font-size: 18px;
     margin-left: 10px;
     margin-right: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 
 article {
     text-indent: 20px;
 }
 
+li {
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
 /* Estilo del Main */
 main {
     display: flex;
@@ -151,6 +173,7 @@ footer {
     display: flex;
     padding: 10px 20px;
     justify-content: flex-end;
+    align-items: center;
 
 }
 
@@ -158,6 +181,7 @@ footer {
 .social-icons {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .social-icons a {
