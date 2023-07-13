@@ -51,11 +51,7 @@ body {
     }
 }
 
-
-
 /* BARRA DE NAVEGACION */
-
-
 
 nav {
     padding: 10px;
@@ -64,40 +60,37 @@ nav {
     justify-content: center;
 
 
-& ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    & ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-& li {
-    margin-right: 10px;
-}
+    & li {
+        margin-right: 10px;
+    }
 
-& a {
-    text-decoration: none;
-    color:$main-color;
-    padding: 8px;
-    border-radius: 4px;
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
+    & a {
+        text-decoration: none;
+        color: $main-color;
+        padding: 8px;
+        border-radius: 4px;
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
 
-    &:hover {
-        background-color:$highlight-color;
+        &:hover {
+            background-color: $highlight-color;
+        }
     }
 }
-}
+
 .btn {
     background-color: $button-background;
 }
-
-
-
-
 
 
 /* Estilo de TEXTOS */
@@ -117,7 +110,7 @@ h2 {
     margin-bottom: 30px;
     font-weight: 900;
     font-family: 'Montserrat', sans-serif;
-    
+
 }
 
 h3 {
@@ -156,8 +149,9 @@ li {
     font-size: 15px;
     margin-left: 10px;
     margin-right: 10px;
-    
+
 }
+
 /* Estilo del Main */
 main {
     display: flex;
@@ -175,7 +169,7 @@ footer {
     padding: 10px 20px;
     justify-content: flex-end;
     align-items: center;
-
+    width: auto;
 }
 
 /* Iconos de redes sociales */
@@ -190,4 +184,17 @@ footer {
 
     font-size: 25px;
     margin-left: 10px;
+}
+
+/* boton flotante para ir al inicio */
+.irinicio {
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    border-radius: 10px
 }
