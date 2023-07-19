@@ -101,13 +101,14 @@ h2 {
   margin-top: 20px;
   margin-bottom: 30px;
   font-weight: 900;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Ysabeau", sans-serif;
 }
 
 h3 {
   font-size: 15px;
   text-align: center;
   margin-top: center;
+  font-family: "Ysabeau", sans-serif;
 }
 
 h4 {
@@ -126,12 +127,13 @@ p {
   font-size: 18px;
   margin-left: 10px;
   margin-right: 10px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Ysabeau", sans-serif;
   font-weight: 400;
 }
 
 article {
   text-indent: 20px;
+  font-family: "Ysabeau", sans-serif;
 }
 
 li {
@@ -176,10 +178,12 @@ footer {
 /* boton flotante para ir al inicio */
 .irinicio {
   display: flex;
+  color: #415d34;
   text-decoration: none;
   flex-direction: column;
   align-items: center;
   font-size: 18px;
+  font-weight: 900;
   position: fixed;
   bottom: 20px;
   left: 20px;
