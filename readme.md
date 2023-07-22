@@ -2,6 +2,7 @@
 [![LOGO EQUILIBRIO NATURAL](https://proyecto-coderhouse-ezequiel-luzardo-ldj9o1wcr-ezeluzardo.vercel.app/images/logoSin.png "LOGO EQUILIBRIO NATURAL")](https://proyecto-coderhouse-ezequiel-luzardo-ldj9o1wcr-ezeluzardo.vercel.app/images/logoSin.png "LOGO EQUILIBRIO NATURAL")
 ##
 Este es mi primer proyecto de desarrollo web, realizado como proyecto final para el curso de desarrollo web de CODERHOUSE. "Equilibrio Natural Florida" es una página web para una empresa de mi ciudad que se dedica a la fabricación y comercialización de productos comestibles naturales.
+##
 
 ## Uso
 
