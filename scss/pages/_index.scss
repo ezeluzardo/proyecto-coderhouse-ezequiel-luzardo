@@ -18,29 +18,3 @@
     margin-right: 0.5rem;
 }
 
-/* VIDEO PUBLICIDAD INDEX */
-.videopublicidadbarras {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    
-}
-
-@media (max-width: 767px) {
-    .embed-responsive::before {
-        content: "";
-        display: block;
-        padding: top 10px;
-    }
-    .embed-responsive .embed-responsive-item {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        margin-top: 2%;
-        margin-bottom: 2%;
-    }
-}

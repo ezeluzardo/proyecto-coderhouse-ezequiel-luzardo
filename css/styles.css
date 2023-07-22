@@ -90,9 +90,8 @@ h1 {
   text-align: center;
   font-size: 35px;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-weight: 900;
-  padding-bottom: 30px;
 }
 
 h2 {
@@ -208,31 +207,6 @@ footer {
   margin-right: 0.5rem;
 }
 
-/* VIDEO PUBLICIDAD INDEX */
-.videopublicidadbarras {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  margin-top: 2%;
-  margin-bottom: 2%;
-}
-
-@media (max-width: 767px) {
-  .embed-responsive::before {
-    content: "";
-    display: block;
-    padding: top 10px;
-  }
-  .embed-responsive .embed-responsive-item {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-  }
-}
 .container-form {
   padding: 20px;
   margin-bottom: 20px;
@@ -271,7 +245,22 @@ footer {
   text-align: left;
 }
 
-/* Video que se encuentra en la secc. productos */
+.boton {
+  background-color: rgba(204, 255, 39, 0.6705882353);
+  border-color: #000;
+  color: #333131;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  border-radius: 10px;
+}
+.boton:hover {
+  background-color: #5714f3;
+  border-color: #000;
+  color: #fff;
+}
+
 .video-container {
   display: flex;
   justify-content: center;
@@ -295,6 +284,21 @@ footer {
 .card:hover {
   transform: scale(1.05);
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.valoresnutricionales {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.row {
+  justify-content: space-around;
+}
+
+.containerimg {
+  padding: 1em;
+  max-width: 500px;
 }
 
 .quienessomos {
@@ -326,6 +330,23 @@ footer {
 .container-tienda .card:hover {
   transform: scale(1.05);
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-container {
+  max-width: 800px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  text-align: justify;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.valoresnutricionales {
+  text-align: left;
+  padding-left: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
