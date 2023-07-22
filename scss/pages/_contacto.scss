@@ -10,14 +10,15 @@
     transition: border-color 0.3s, box-shadow 0.3s;
 
 }
+
 .container-form:hover {
     border-color: #999;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-  }
+}
 
 .boton-enviar {
     background-color: #ccff27ab;
-    border-color: #000; 
+    border-color: #000;
     color: #333131;
     display: flex;
     justify-content: center;
