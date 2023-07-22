@@ -88,7 +88,7 @@ nav a:hover {
 /* Estilo de TEXTOS */
 h1 {
   text-align: center;
-  font-size: 35px;
+  font-size: 30px;
   margin-top: 20px;
   margin-bottom: 10px;
   font-weight: 900;
@@ -123,7 +123,7 @@ h5 {
 p {
   text-align: auto;
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 20px;
   margin-left: 10px;
   margin-right: 10px;
   font-family: "Ysabeau", sans-serif;
@@ -136,7 +136,7 @@ article {
 }
 
 li {
-  font-size: 15px;
+  font-size: 17px;
   margin-left: 10px;
   margin-right: 10px;
 }
