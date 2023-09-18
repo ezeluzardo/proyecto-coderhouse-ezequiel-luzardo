@@ -1,8 +1,9 @@
 
+
 document.addEventListener("DOMContentLoaded", function () {
   const productos = [
-    { id: 1, nombre: "Pasta de maní", precio: 1000, cantidad: 10 },
-    { id: 2, nombre: "Cookies con avena y chispas de chocolate", precio: 2000, cantidad: 10 },
+    { id: 1, nombre: "Cookies con avena y chispas de chocolate", precio: 2000, cantidad: 10 },
+    { id: 2, nombre: "Crema de maní", precio: 1000, cantidad: 10 },
     { id: 3, nombre: "Turron de semillas", precio: 2000, cantidad: 10 },
     { id: 4, nombre: "Granola", precio: 2000, cantidad: 10 },
     { id: 5, nombre: "Barras de cereales con pasas", precio: 2000, cantidad: 10 }
@@ -15,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function agregarACarrito(id, cantidad) {
-    // Resto 1 al id porque los índices en el array de productos comienzan en 0
     const productoExistente = carritoArr.find(producto => producto.id === id);
 
     if (productoExistente) {
@@ -39,13 +39,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function verCarrito() {
     const carritoMenu = document.getElementById("carritoMenu");
-    carritoMenu.innerHTML = ""; 
+    carritoMenu.innerHTML = "";
 
     carritoArr.forEach((producto) => {
       const li = document.createElement("li");
       li.textContent = `${producto.nombre} x ${producto.cantidad} $${producto.precio * producto.cantidad}`;
 
-      // Agregar un botón de eliminar
       const botonEliminar = document.createElement("button");
       botonEliminar.textContent = "Eliminar";
       botonEliminar.classList.add("btn", "btn-info", "btn-sm");
@@ -53,30 +52,28 @@ document.addEventListener("DOMContentLoaded", function () {
         eliminarDelCarrito(producto.id);
         verCarrito();
         actualizarIconoCarrito();
-        actualizarTotalCarrito(); // total del carrito al eliminar un producto
-        localStorage.setItem('carrito', JSON.stringify(carritoArr)); // Guardar en Local Storage
+        actualizarTotalCarrito();
+        localStorage.setItem('carrito', JSON.stringify(carritoArr));
       });
 
       li.appendChild(botonEliminar);
       carritoMenu.appendChild(li);
     });
 
-    //  total del carrito
     const totalCarrito = document.createElement("li");
     totalCarrito.textContent = `Total: $${calcularTotalCarrito()}`;
     carritoMenu.appendChild(totalCarrito);
 
-    //  botón para pagar
     const botonPagar = document.createElement("button");
     botonPagar.textContent = "Pagar";
     botonPagar.classList.add("btn", "btn-success");
     botonPagar.addEventListener("click", () => {
       alert("¡Pago exitoso!");
-      carritoArr.length = 0; // Vaciar el carrito después de pagar
+      carritoArr.length = 0;
       verCarrito();
       actualizarIconoCarrito();
       actualizarTotalCarrito();
-      localStorage.setItem('carrito', JSON.stringify(carritoArr)); // Vaciar el Local Storage
+      localStorage.setItem('carrito', JSON.stringify(carritoArr));
     });
     carritoMenu.appendChild(botonPagar);
   }
@@ -97,13 +94,20 @@ document.addEventListener("DOMContentLoaded", function () {
   botonesComprar.forEach((boton) => {
     boton.addEventListener('click', function () {
       const productId = parseInt(boton.getAttribute('data-product-id'));
-      const cantidad = parseInt(prompt(`Ingrese la cantidad que desea comprar del producto ${productos[productId - 1].nombre}:`));
+      const cantidadInput = document.getElementById(`cantidadProducto${productId}`);
+      const cantidad = parseInt(cantidadInput.value);
       if (cantidad > 0) {
         agregarACarrito(productId, cantidad);
         verCarrito();
-        actualizarIconoCarrito(); // Actualiza el ícono del carrito
+        actualizarIconoCarrito();
         actualizarTotalCarrito();
-        localStorage.setItem('carrito', JSON.stringify(carritoArr)); // Guardar en Local Storage
+        localStorage.setItem('carrito', JSON.stringify(carritoArr));
+        const mensajeExito = document.getElementById(`mensajeExito${productId}`);
+        mensajeExito.textContent = `Se agregaron ${cantidad} ${productos[productId - 1].nombre}(s) al carrito.`;
+        mensajeExito.style.display = 'block';
+        setTimeout(() => {
+          mensajeExito.style.display = 'none';
+        }, 3000);
       } else {
         alert("La cantidad a comprar debe ser mayor a 0. Inténtelo nuevamente.");
       }
