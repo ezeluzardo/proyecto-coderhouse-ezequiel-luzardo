@@ -33,6 +33,7 @@ La página web es muy intuitiva y fácil de usar. A continuación, se describen 
 - SEO
 - GITHUB
 - Versel
+- Javascrip
 
 ## Contribución
 
