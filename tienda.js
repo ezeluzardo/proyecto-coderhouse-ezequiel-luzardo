@@ -2,11 +2,11 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   const productos = [
-    { id: 1, nombre: "Cookies con avena y chispas de chocolate", precio: 2000, cantidad: 10 },
-    { id: 2, nombre: "Crema de maní", precio: 1000, cantidad: 10 },
-    { id: 3, nombre: "Turron de semillas", precio: 2000, cantidad: 10 },
-    { id: 4, nombre: "Granola", precio: 2000, cantidad: 10 },
-    { id: 5, nombre: "Barras de cereales con pasas", precio: 2000, cantidad: 10 }
+    { id: 1, nombre: "Cookies con avena y chispas de chocolate", precio: 85, cantidad: 1000 },
+    { id: 2, nombre: "Crema de maní", precio: 180, cantidad: 1000 },
+    { id: 3, nombre: "Turron de semillas", precio: 35, cantidad: 1000 },
+    { id: 4, nombre: "Granola", precio: 180, cantidad: 1000 },
+    { id: 5, nombre: "Barras de cereales con pasas", precio: 60, cantidad: 1000 }
   ];
 
   let carritoArr = [];
