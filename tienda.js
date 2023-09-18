@@ -1,5 +1,4 @@
 
-
 document.addEventListener("DOMContentLoaded", function () {
   const productos = [
     { id: 1, nombre: "Pasta de maní", precio: 1000, cantidad: 10 },
@@ -9,9 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
     { id: 5, nombre: "Barras de cereales con pasas", precio: 2000, cantidad: 10 }
   ];
 
-  const carritoArr = [];
+  let carritoArr = [];
+
+  if (localStorage.getItem('carrito')) {
+    carritoArr = JSON.parse(localStorage.getItem('carrito'));
+  }
 
   function agregarACarrito(id, cantidad) {
+    // Resto 1 al id porque los índices en el array de productos comienzan en 0
     const productoExistente = carritoArr.find(producto => producto.id === id);
 
     if (productoExistente) {
@@ -50,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         verCarrito();
         actualizarIconoCarrito();
         actualizarTotalCarrito(); // total del carrito al eliminar un producto
+        localStorage.setItem('carrito', JSON.stringify(carritoArr)); // Guardar en Local Storage
       });
 
       li.appendChild(botonEliminar);
@@ -66,12 +71,12 @@ document.addEventListener("DOMContentLoaded", function () {
     botonPagar.textContent = "Pagar";
     botonPagar.classList.add("btn", "btn-success");
     botonPagar.addEventListener("click", () => {
-      
       alert("¡Pago exitoso!");
       carritoArr.length = 0; // Vaciar el carrito después de pagar
       verCarrito();
       actualizarIconoCarrito();
       actualizarTotalCarrito();
+      localStorage.setItem('carrito', JSON.stringify(carritoArr)); // Vaciar el Local Storage
     });
     carritoMenu.appendChild(botonPagar);
   }
@@ -97,17 +102,22 @@ document.addEventListener("DOMContentLoaded", function () {
         agregarACarrito(productId, cantidad);
         verCarrito();
         actualizarIconoCarrito(); // Actualiza el ícono del carrito
-        actualizarTotalCarrito(); 
+        actualizarTotalCarrito();
+        localStorage.setItem('carrito', JSON.stringify(carritoArr)); // Guardar en Local Storage
       } else {
         alert("La cantidad a comprar debe ser mayor a 0. Inténtelo nuevamente.");
       }
     });
   });
 
-  
   const irInicioBtn = document.querySelector('.irinicio');
   irInicioBtn.addEventListener('click', function (e) {
     e.preventDefault();
     window.scrollTo(0, 0);
   });
+
+  // Llamar a verCarrito para cargar el contenido desde el Local Storage al cargar la página
+  verCarrito();
+  actualizarIconoCarrito();
+  actualizarTotalCarrito();
 });
