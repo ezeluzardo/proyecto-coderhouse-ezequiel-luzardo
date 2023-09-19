@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
         mensajeExito.style.display = 'block';
         setTimeout(() => {
           mensajeExito.style.display = 'none';
-        }, 3000);
+        }, 4000);
       } else {
         alert("La cantidad a comprar debe ser mayor a 0. Inténtelo nuevamente.");
       }
