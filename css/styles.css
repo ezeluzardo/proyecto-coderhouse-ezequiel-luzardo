@@ -79,12 +79,20 @@ nav a {
 }
 nav a:hover {
   background-color: rgba(217, 245, 125, 0.5019607843);
+  color: #333;
 }
 
 .btn {
   background-color: rgba(204, 255, 39, 0.6705882353);
+  border-color: #000;
+  color: #000;
+ 
 }
-
+.btn:hover {
+  background-color: #6df314;
+  border-color: #000;
+  color: #000000;
+}
 .btn-outline-success:hover {
   color: #6df314;
   background-color: rgba(204, 255, 39, 0.6705882353);
@@ -92,6 +100,21 @@ nav a:hover {
   color: #333;
   font-family: "Roboto", sans-serif;
 }
+/* Estilos del carrito */
+#carritoDropdown {
+  font-size: 15px;
+  color: #333;
+}
+
+.dropdown-menu {
+  width: 300px;
+}
+
+#carritoTotal {
+ 
+  font-weight: 600;
+}
+
 
 /* Estilo de TEXTOS */
 h1 {
@@ -195,6 +218,13 @@ footer {
   bottom: 20px;
   left: 20px;
   border-radius: 10px;
+}
+
+
+.precio {
+  margin-bottom: 0px; /* Ajusta este valor según sea necesario */
+  text-align: center;
+  font-size: 25px;
 }
 
 .car-icon {
