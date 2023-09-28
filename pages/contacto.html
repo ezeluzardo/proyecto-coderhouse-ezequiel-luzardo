@@ -17,6 +17,7 @@
     <meta name="description"
         content="Descubre nuestra amplia selección de granola, mantequilla de maní y barras de cereales naturales en Uruguay. Deléitate con productos artesanales y saludables, elaborados con ingredientes naturales de la más alta calidad. Encuentra la combinación perfecta de sabores y texturas que te brindarán energía y bienestar en cada bocado. ¡Compra ahora y disfruta de los beneficios de una alimentación consciente y nutritiva!">
     <title>EquilibrioNaturalFlorida</title>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
@@ -31,6 +32,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,800;1,200;1,500&family=Ysabeau:wght@300;400;500;600;800;900&display=swap"
         rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -85,31 +87,29 @@
     <main>
         <h1>Contacto</h1>
         <div class="container-form">
-            <form>
+            <form id="myForm"> 
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre</label>
-                    <input type="nombre" class="form-control" id="nombre" aria-describedby="nombre">
+                    <input type="text" name="nombre" class="form-control" id="nombre" aria-describedby="nombre">
                 </div>
                 <div class="mb-3">
                     <label for="apellido" class="form-label">Apellido</label>
-                    <input type="apellido" class="form-control" id="apellido" aria-describedby="apellido">
+                    <input type="text" name="apellido" class="form-control" id="apellido" aria-describedby="apellido">
                 </div>
                 <div class="mb-3">
                     <label for="telefono" class="form-label">Telefono</label>
-                    <input type="telefono" class="form-control" id="telefono" aria-describedby="telefono">
+                    <input type="tel" name="telefono" class="form-control" id="telefono" aria-describedby="telefono">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label"> Envie su consulta y nos pondremos en
                         contacto a la brevedad.</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" name="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
-
-
                 <button type="submit" class="boton-enviar btn btn-primary">Enviar</button>
             </form>
         </div>
@@ -137,10 +137,15 @@
             </a>
         </div>
     </footer>
-    <script> src="/formulario.js"</script>
+    <script type="text/javascript">
+        emailjs.init('ADIHRDij4Prttf7fB')
+    </script>
+    <script> src = "/formulario.js"</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
+
+    <script src="./../contacto.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <script type="text/javascript">
