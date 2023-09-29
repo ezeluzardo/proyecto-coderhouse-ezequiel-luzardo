@@ -38,14 +38,14 @@ document.addEventListener("DOMContentLoaded", function () {
   function verCarrito() {
     const carritoMenu = document.getElementById("carritoMenu");
     carritoMenu.innerHTML = "";
-
+  
     carritoArr.forEach((producto) => {
       const li = document.createElement("li");
       li.textContent = `${producto.nombre} x ${producto.cantidad} $${producto.precio * producto.cantidad}`;
-
+  
       const botonEliminar = document.createElement("button");
       botonEliminar.textContent = "Eliminar";
-      botonEliminar.classList.add("btn", "btn-info", "btn-sm");
+      botonEliminar.classList.add("btn", "btn-info", "btn-sm", "eliminar-btn");
       botonEliminar.addEventListener("click", () => {
         eliminarDelCarrito(producto.id);
         verCarrito();
@@ -53,18 +53,14 @@ document.addEventListener("DOMContentLoaded", function () {
         actualizarTotalCarrito();
         localStorage.setItem('carrito', JSON.stringify(carritoArr));
       });
-
+  
       li.appendChild(botonEliminar);
       carritoMenu.appendChild(li);
     });
-
-    const totalCarrito = document.createElement("li");
-    totalCarrito.textContent = `Total: $${calcularTotalCarrito()}`;
-    carritoMenu.appendChild(totalCarrito);
-
+  
     const botonPagar = document.createElement("button");
     botonPagar.textContent = "Pagar";
-    botonPagar.classList.add("btn", "btn-success");
+    botonPagar.classList.add("btn", "btn-success", "pagar-btn");
     botonPagar.addEventListener("click", () => {
       alert("¡Pago exitoso!");
       carritoArr.length = 0;
@@ -75,6 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     carritoMenu.appendChild(botonPagar);
   }
+  
+
 
   function actualizarTotalCarrito() {
     const totalCarrito = document.querySelector("#carritoTotal");

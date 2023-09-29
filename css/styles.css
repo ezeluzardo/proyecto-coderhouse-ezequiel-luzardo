@@ -114,7 +114,15 @@ nav a:hover {
  
   font-weight: 600;
 }
-
+.eliminar-btn {
+  float: right;
+  margin-left: 10px; 
+}
+.pagar-btn {
+  float: left;
+  margin-left: 10px; 
+  margin-top: 15px;
+}
 
 /* Estilo de TEXTOS */
 h1 {
