@@ -25,13 +25,48 @@ async function enviarFormulario() {
         const response = await emailjs.send("service_68gss55", "template_pmt8n5m", emailData);
 
         console.log("Correo electrónico enviado con éxito", response);
-        alert("Correo electrónico enviado con éxito");
+        /* alert("Correo electrónico enviado con éxito"); */
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+
+        Toast.fire({
+            icon: 'success',
+            title: 'Correo enviado con éxito'
+        })
 
         // Limpia los campos del formulario
-        document.getElementById("myForm").reset();
+        document.querySelector("[name='nombre']").value = "";
+        document.querySelector("[name='apellido']").value = "";
+        document.querySelector("[name='email']").value = "";
+        document.querySelector("[name='telefono']").value = "";
+        document.querySelector("[name='form-control']").value = "";
     } catch (error) {
         console.log("Error al enviar el correo electrónico", error);
-        alert("Error al enviar el correo electrónico");
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+
+        Toast.fire({
+            icon: 'error',
+            title: 'Error al enviar el correo electrónico'
+        })
     }
 }
 
@@ -42,3 +77,5 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
     // Llama a la función para enviar el formulario de manera asincrónica
     enviarFormulario();
 });
+
+

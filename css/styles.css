@@ -106,6 +106,16 @@ nav a:hover {
   color: #333;
 }
 
+ 
+
+#carritoMenu li {
+  display: flex;
+  justify-content: space-between;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  margin: 10px;
+
+}
 .dropdown-menu {
   width: 300px;
 }
@@ -117,11 +127,14 @@ nav a:hover {
 .eliminar-btn {
   float: right;
   margin-left: 10px; 
+  height: fit-content;
 }
 .pagar-btn {
   float: left;
   margin-left: 10px; 
   margin-top: 15px;
+  
+  
 }
 
 /* Estilo de TEXTOS */

@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function verCarrito() {
-    const carritoMenu = document.getElementById("carritoMenu");
+    const carritoMenu = document.getElementById("carritoMenu");  // Selecciona el elemento con el id carritoMenu
     carritoMenu.innerHTML = "";
   
     carritoArr.forEach((producto) => {
@@ -52,7 +52,25 @@ document.addEventListener("DOMContentLoaded", function () {
         actualizarIconoCarrito();
         actualizarTotalCarrito();
         localStorage.setItem('carrito', JSON.stringify(carritoArr));
+      
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+          }
+        })
+        
+        Toast.fire({
+          icon: 'error',
+          title: 'Producto eliminado del carrito'
+        })
       });
+
   
       li.appendChild(botonEliminar);
       carritoMenu.appendChild(li);
@@ -62,7 +80,23 @@ document.addEventListener("DOMContentLoaded", function () {
     botonPagar.textContent = "Pagar";
     botonPagar.classList.add("btn", "btn-success", "pagar-btn");
     botonPagar.addEventListener("click", () => {
-      alert("¡Pago exitoso!");
+  
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      
+      Toast.fire({
+        icon: 'success',
+        title: 'Pago exitoso'
+      })
       carritoArr.length = 0;
       verCarrito();
       actualizarIconoCarrito();
@@ -86,15 +120,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function mostrarMensaje(mensaje, tipo) {
-    Toastify({
-      text: mensaje,
-      duration: 3000, 
-      newWindow: true,
-      close: true,
-      gravity: "top", 
-      position: "right", 
-      backgroundColor: tipo === 'error' ? "red" : "green", 
-    }).showToast();
+
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    
+    Toast.fire({
+      icon: 'success',
+      title: 'Producto agregado al carrito'
+    })
   }
 
   const botonesComprar = document.querySelectorAll('.boton');
